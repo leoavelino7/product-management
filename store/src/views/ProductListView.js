@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FormattedMessage } from "react-intl";
 
 import { Channel } from '../services/EventService';
 import { ProductService } from "../services/ProductService";
@@ -43,7 +44,7 @@ class ProductListView extends Component {
         const { state } = this;
         return (
             <div>
-                <h1>Lista de produtos</h1>
+                <h1><FormattedMessage defaultMessage="Product List" id="product.list.title"/></h1>
                 <ProductList products={state.products} />
             </div>
         );

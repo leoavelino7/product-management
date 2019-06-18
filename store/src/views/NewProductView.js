@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { FormattedMessage } from "react-intl";
+
 import { ProductService } from "../services/ProductService";
 
 class NewProductView extends Component { 
@@ -43,22 +45,24 @@ class NewProductView extends Component {
 
         return (
             <div>
-                <h1>Novo Produto</h1>
+                <h1>
+                    <FormattedMessage defaultMessage="New Product" id="product.new.title" />
+                </h1>
                 <form className="product-form" onSubmit={this.handleSubmit}>
                     <div>
-                        <label>Imagem</label>
+                        <label><FormattedMessage defaultMessage="Image" id="product.new.image" /></label>
                         <input name="image" type="text" value={state.image} onChange={this.handleChange} />
                     </div>
                     <div>
-                        <label>Descrição</label>
+                        <label><FormattedMessage defaultMessage="Description" id="product.new.description" /></label>
                         <input name="description" type="text" value={state.description} onChange={this.handleChange} />
                     </div>
                     <div>
-                        <label>Preço</label>
+                        <label><FormattedMessage defaultMessage="Price" id="product.new.price" /></label>
                         <input name="price" type="text" value={state.price} onChange={this.handleChange} />
                     </div>
                     <div>
-                        <button type="submit">Criar Produto</button>
+                        <button type="submit"><FormattedMessage defaultMessage="Create Product" id="product.new.create" /></button>
                     </div>
                 </form>
             </div>
