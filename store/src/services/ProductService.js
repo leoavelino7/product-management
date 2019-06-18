@@ -6,12 +6,12 @@ const ENDPOINT = "products";
 
 export const ProductService = {
     list() {
-        ApiService.get(ENDPOINT);
+        return ApiService.get(ENDPOINT);
     },
     create(newProduct) {
-        ApiService.post(ENDPOINT, newProduct);
+        return ApiService.post(ENDPOINT, newProduct);
     },
     remove(productId) {
-        ApiService.delete(ENDPOINT, productId);
+        return ApiService.delete(ENDPOINT, productId);
     }
 }

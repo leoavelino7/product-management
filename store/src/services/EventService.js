@@ -1,3 +1,3 @@
-import { EventEmitter } from "event";
+import { EventEmitter } from "events";
 
 export const Channel = new EventEmitter();

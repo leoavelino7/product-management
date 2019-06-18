@@ -3,7 +3,7 @@ const API = "http://localhost:3002/api/store/";
 export const ApiService = {
     get(endpoint) {
         return fetch(`${API}${endpoint}`)
-            .then(response => response.json())
+            .then(response => response.json());
     },
     post(endpoint, data) {
         return fetch(`${API}${endpoint}`, {
